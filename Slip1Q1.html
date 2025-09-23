@@ -1,0 +1,35 @@
+Q1: Check if a string is a palindrome using a loop 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Palindrome Check</title>
+</head>
+<body>
+  <h2>Check if a String is a Palindrome</h2>
+  
+  <input type="text" id="textInput" placeholder="Enter a string">
+  <button onclick="checkPalindrome()">Check</button>
+  
+  <p id="result"></p>
+
+  <script>
+    function checkPalindrome() {
+      let str = document.getElementById("textInput").value;
+      let isPalindrome = true;
+
+      for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] !== str[str.length - 1 - i]) {
+          isPalindrome = false;
+          break;
+        }
+      }
+
+      if (isPalindrome) {
+        document.getElementById("result").innerText = "It is a palindrome";
+      } else {
+        document.getElementById("result").innerText = "It is not a palindrome";
+      }
+    }
+  </script>
+</body>
+</html>

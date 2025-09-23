@@ -1,0 +1,41 @@
+Q1: Prompt 5 times, classify as positive / negative / zero
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Classification</title>
+</head>
+<body>
+  <h2>Classify 5 Numbers</h2>
+
+  <p>Enter 5 numbers separated by commas:</p>
+  <input type="text" id="numbersInput" placeholder="e.g. 5,-2,0,7,-1">
+  <button onclick="classifyNumbers()">Classify</button>
+
+  <p id="result"></p>
+
+  <script>
+    function classifyNumbers() {
+      let nums = document.getElementById("numbersInput").value
+                  .split(",")
+                  .map(Number);
+
+      let pos = 0, neg = 0, zero = 0;
+
+      for (let n of nums) {
+        if (isNaN(n)) {
+          continue; // ignore non-numbers
+        } else if (n > 0) {
+          pos++;
+        } else if (n < 0) {
+          neg++;
+        } else {
+          zero++;
+        }
+      }
+
+      document.getElementById("result").innerText = 
+        "Positive: " + pos + "\nNegative: " + neg + "\nZero: " + zero;
+    }
+  </script>
+</body>
+</html>

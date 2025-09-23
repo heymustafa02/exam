@@ -1,0 +1,22 @@
+Q1: Number pyramid of N rows 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Number Pyramid</title> 
+</head> 
+<body> 
+<script> 
+let n = Number(prompt("Enter number of rows:")); 
+let out = ""; 
+ 
+for (let i = 1; i <= n; i++) { 
+  for (let j = 1; j <= i; j++) { 
+    out += j + " "; 
+  } 
+  out += "\n"; 
+} 
+ 
+alert(out); 
+</script> 
+</body> 
+</html>

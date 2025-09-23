@@ -1,0 +1,23 @@
+Q2: Event delegation on a parent container 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Event Delegation</title> 
+</head> 
+<body> 
+<div id="container"> 
+  <button>Button 1</button> 
+  <button>Button 2</button> 
+  <button>Button 3</button> 
+</div> 
+ 
+<script> 
+document.getElementById("container").addEventListener("click", 
+function(e) { 
+  if (e.target.tagName === "BUTTON") { 
+    alert("You clicked: " + e.target.textContent); 
+  } 
+}); 
+</script> 
+</body> 
+</html>

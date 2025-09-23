@@ -1,0 +1,31 @@
+Q2. Write JS program to write a function countCharacters that counts the occurrences of each character in a string and returns the results as an object
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Count Characters</title>
+</head>
+<body>
+  <h2>Character Counter</h2>
+
+  <input type="text" id="textInput" placeholder="Enter a string">
+  <button onclick="showCounts()">Count Characters</button>
+
+  <p id="result"></p>
+
+  <script>
+    function countCharacters(str) {
+      let counts = {};
+      for (let c of str) {
+        counts[c] = (counts[c] || 0) + 1;
+      }
+      return counts;
+    }
+
+    function showCounts() {
+      let input = document.getElementById("textInput").value;
+      let result = countCharacters(input);
+      document.getElementById("result").innerText = JSON.stringify(result);
+    }
+  </script>
+</body>
+</html>

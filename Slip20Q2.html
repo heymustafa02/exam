@@ -1,0 +1,26 @@
+Q2: Display image and change dynamically on button 
+click 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Change Image</title> 
+</head> 
+<body> 
+<img id="img" src="https://via.placeholder.com/150" 
+alt="Placeholder" style="width:150px;height:150px;"> 
+<p id="caption">This is a placeholder image</p> 
+<button onclick="change()">Change Image</button> 
+ 
+<script> 
+function change() { 
+  let img = document.getElementById("img"); 
+  let cap = document.getElementById("caption"); 
+  img.src = "https://via.placeholder.com/200"; 
+  img.style.width = "200px"; 
+  img.style.height = "200px"; 
+  cap.textContent = "Image changed!"; 
+  cap.style.color = "blue"; 
+} 
+</script> 
+</body> 
+</html>

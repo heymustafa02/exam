@@ -1,0 +1,23 @@
+Q2: Car constructor with getDetails() using 
+prototype 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Car Object</title> 
+</head> 
+<body> 
+<script> 
+function Car(brand, year) { 
+  this.brand = brand; 
+  this.year = year; 
+} 
+ 
+Car.prototype.getDetails = function() { 
+  return this.brand + " - " + this.year; 
+}; 
+ 
+let c = new Car("Toyota", 2020); 
+alert(c.getDetails()); 
+</script> 
+</body> 
+</html>

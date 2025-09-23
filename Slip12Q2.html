@@ -1,0 +1,21 @@
+Q2: Replace a paragraph using replaceChild() 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Replace Paragraph</title> 
+</head> 
+<body> 
+  <p id="oldPara">This is the old paragraph.</p> 
+  <button onclick="replacePara()">Replace</button> 
+ 
+<script> 
+function replacePara() { 
+  let parent = document.body; 
+  let oldP = document.getElementById("oldPara"); 
+  let newP = document.createElement("p"); 
+  newP.textContent = "This is the new paragraph."; 
+  parent.replaceChild(newP, oldP); 
+} 
+</script> 
+</body> 
+</html>

@@ -1,0 +1,20 @@
+Q1: Pass a JavaScript function as a parameter 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Function as Parameter</title> 
+</head> 
+<body> 
+<script> 
+function greet() { 
+  alert("Hello from greet()"); 
+} 
+ 
+function callFunc(fn) { 
+  fn(); 
+} 
+ 
+callFunc(greet); 
+</script> 
+</body> 
+</html>

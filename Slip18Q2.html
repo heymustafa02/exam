@@ -1,0 +1,30 @@
+Q2: Form validation with preventDefault 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Form Validation</title> 
+</head> 
+<body> 
+<form id="myForm"> 
+  <input type="text" id="name" placeholder="Enter name"> 
+  <input type="submit" value="Submit"> 
+</form> 
+<p id="msg" style="color:red;"></p> 
+ 
+<script> 
+document.getElementById("myForm").addEventListener("submit", 
+function(e) { 
+  let name = document.getElementById("name").value; 
+  let msg = document.getElementById("msg"); 
+  msg.textContent = ""; 
+   
+  if (name.trim() === "") { 
+    e.preventDefault(); 
+    msg.textContent = "Name cannot be empty"; 
+  } else { 
+    alert("Form submitted!"); 
+  } 
+}); 
+</script> 
+</body> 
+</html>

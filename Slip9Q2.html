@@ -1,0 +1,28 @@
+Q2: Email validation with custom error (show in red) 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Email Validation</title> 
+</head> 
+<body> 
+  <input type="text" id="email" placeholder="Enter email"> 
+  <button onclick="checkEmail()">Check</button> 
+  <p id="msg" style="color:red;"></p> 
+ 
+<script> 
+function checkEmail() { 
+  let email = document.getElementById("email").value; 
+  let msg = document.getElementById("msg"); 
+  msg.textContent = ""; 
+  try { 
+    if (!email.includes("@") || !email.includes(".")) { 
+      throw "Invalid email format"; 
+    } 
+    alert("Valid email!"); 
+  } catch (e) { 
+    msg.textContent = "Error: " + e; 
+  } 
+} 
+</script> 
+</body> 
+</html>

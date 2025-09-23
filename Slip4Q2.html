@@ -1,0 +1,24 @@
+Q2: Find the longest word in a string 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Longest Word</title> 
+</head> 
+<body> 
+<script> 
+function findLongestWord(str) { 
+  let words = str.split(" "); 
+  let longest = ""; 
+  for (let w of words) { 
+    if (w.length > longest.length) { 
+      longest = w; 
+    } 
+  } 
+  return longest; 
+} 
+ 
+let input = prompt("Enter a sentence:"); 
+alert("Longest word is: " + findLongestWord(input)); 
+</script> 
+</body> 
+</html>

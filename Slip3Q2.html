@@ -1,0 +1,23 @@
+Q2: Filter available products and list names with 
+prices (using arrow functions) 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Product List</title> 
+</head> 
+<body> 
+<script> 
+let products = [ 
+  {id: 1, name: "Pen", price: 10, inStock: true}, 
+  {id: 2, name: "Book", price: 50, inStock: false}, 
+  {id: 3, name: "Bag", price: 200, inStock: true} 
+]; 
+ 
+let available = products.filter(p => p.inStock); 
+let namesWithPrices = available.map(p => p.name + " - Rs." + 
+p.price); 
+ 
+alert("Available: " + namesWithPrices.join(", ")); 
+</script> 
+</body> 
+</html>

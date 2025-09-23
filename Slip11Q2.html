@@ -1,0 +1,30 @@
+Q2: Shape class and Rectangle class (inheritance) 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Shape and Rectangle</title> 
+</head> 
+<body> 
+<script> 
+class Shape { 
+  area() { 
+    return 0; 
+  } 
+} 
+ 
+class Rectangle extends Shape { 
+  constructor(w, h) { 
+    super(); 
+    this.w = w; 
+    this.h = h; 
+  } 
+  area() { 
+    return this.w * this.h; 
+  } 
+} 
+ 
+let r = new Rectangle(5, 4); 
+alert("Area of rectangle: " + r.area()); 
+</script> 
+</body> 
+</html>

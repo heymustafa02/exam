@@ -1,0 +1,27 @@
+Q2: Division with try / catch / finally 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Division Form</title> 
+</head> 
+<body> 
+  <input type="number" id="n1" placeholder="Number 1"> 
+  <input type="number" id="n2" placeholder="Number 2"> 
+  <button onclick="divide()">Divide</button> 
+ 
+<script> 
+function divide() { 
+  try { 
+    let a = Number(document.getElementById("n1").value); 
+    let b = Number(document.getElementById("n2").value); 
+    if (b === 0) throw "Cannot divide by zero"; 
+    alert("Result: " + (a / b)); 
+  } catch (e) { 
+    alert("Error: " + e); 
+  } finally { 
+    console.log("Division attempted"); 
+  } 
+} 
+</script> 
+</body> 
+</html>

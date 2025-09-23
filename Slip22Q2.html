@@ -1,0 +1,20 @@
+Q2: Sum of even and odd numbers from user input 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Sum of Even & Odd</title> 
+</head> 
+<body> 
+<script> 
+let arr = prompt("Enter numbers separated by commas:").split(",").map(Number); 
+let evenSum = 0, oddSum = 0; 
+ 
+for (let n of arr) { 
+  if (n % 2 === 0) evenSum += n; 
+  else oddSum += n; 
+} 
+ 
+alert("Sum of Even: " + evenSum + "\nSum of Odd: " + oddSum); 
+</script> 
+</body> 
+</html>

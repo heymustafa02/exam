@@ -1,0 +1,25 @@
+Q2: Form to add items to a list dynamically using 
+appendChild() 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Add Items to List</title> 
+</head> 
+<body> 
+  <input type="text" id="item" placeholder="Enter item"> 
+  <button onclick="addItem()">Add</button> 
+  <ul id="myList"></ul> 
+ 
+<script> 
+function addItem() { 
+  let text = document.getElementById("item").value; 
+  if (text !== "") { 
+    let li = document.createElement("li"); 
+    li.textContent = text; 
+    document.getElementById("myList").appendChild(li); 
+    document.getElementById("item").value = ""; 
+  } 
+} 
+</script> 
+</body> 
+</html>

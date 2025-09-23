@@ -1,0 +1,19 @@
+Q2: Guess a number between 1–10 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Guess Number</title> 
+</head> 
+<body> 
+<script> 
+let number = Math.floor(Math.random() * 10) + 1; 
+let guess; 
+ 
+do { 
+  guess = Number(prompt("Guess a number between 1 and 10:")); 
+} while (guess !== number); 
+ 
+alert("Correct! The number was " + number); 
+</script> 
+</body> 
+</html>

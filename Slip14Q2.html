@@ -1,0 +1,33 @@
+Q2: Two counters (Increment & Decrement) 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Counters</title> 
+</head> 
+<body> 
+  <p>Increment: <span id="inc">0</span></p> 
+  <button onclick="inc()">Increment</button> 
+ 
+  <p>Decrement: <span id="dec">10</span></p> 
+  <button onclick="dec()">Decrement</button> 
+ 
+<script> 
+let i = 0; 
+let d = 10; 
+ 
+function inc() { 
+  if (i < 9) { 
+    i++; 
+    document.getElementById("inc").textContent = i; 
+  } 
+} 
+ 
+function dec() { 
+  if (d > 0) { 
+    d--; 
+    document.getElementById("dec").textContent = d; 
+  } 
+} 
+</script> 
+</body> 
+</html>

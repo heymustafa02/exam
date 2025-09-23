@@ -1,0 +1,22 @@
+Q1: Accept 5 numbers and display maximum and 
+minimum 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Max & Min</title> 
+</head> 
+<body> 
+<script> 
+let numbers = []; 
+ 
+for (let i = 0; i < 5; i++) { 
+  numbers.push(Number(prompt("Enter number " + (i+1) + ":"))); 
+} 
+ 
+let max = Math.max(...numbers); 
+let min = Math.min(...numbers); 
+ 
+alert("Maximum: " + max + "\nMinimum: " + min); 
+</script> 
+</body> 
+</html>

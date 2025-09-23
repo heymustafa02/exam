@@ -1,0 +1,32 @@
+Q2: Find second lowest and second greatest numbers
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Second Lowest & Greatest</title>
+</head>
+<body>
+  <h2>Second Lowest & Second Greatest Finder</h2>
+
+  <input type="text" id="numbersInput" placeholder="Enter numbers separated by commas">
+  <button onclick="findSecond()">Find</button>
+
+  <p id="result"></p>
+
+  <script>
+    function findSecond() {
+      let nums = document.getElementById("numbersInput").value
+                  .split(",")
+                  .map(Number);
+
+      // Remove duplicates and sort
+      let unique = [...new Set(nums)].sort((a, b) => a - b);
+
+      let secondLowest = unique.length > 1 ? unique[1] : "N/A";
+      let secondGreatest = unique.length > 1 ? unique[unique.length - 2] : "N/A";
+
+      document.getElementById("result").innerText = 
+        "Second Lowest: " + secondLowest + "\nSecond Greatest: " + secondGreatest;
+    }
+  </script>
+</body>
+</html>

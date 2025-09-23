@@ -1,0 +1,26 @@
+Q2. JS program to create a list where clicking a button 
+removes the last item using removeChild() 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Remove Last List Item</title> 
+</head> 
+<body> 
+  <ul id="myList"> 
+    <li>Item 1</li> 
+    <li>Item 2</li> 
+    <li>Item 3</li> 
+  </ul> 
+ 
+  <button onclick="removeLast()">Remove Last Item</button> 
+ 
+  <script> 
+    function removeLast() { 
+      const list = document.getElementById("myList"); 
+      if (list.lastElementChild) { 
+        list.removeChild(list.lastElementChild); 
+      } 
+    } 
+  </script> 
+</body> 
+</html>

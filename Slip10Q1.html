@@ -1,0 +1,22 @@
+Q1: Multiplication tables from 1 to N (grid format) 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Multiplication Grid</title> 
+</head> 
+<body> 
+<script> 
+let n = Number(prompt("Enter a number:")); 
+let out = ""; 
+ 
+for (let i = 1; i <= n; i++) { 
+  for (let j = 1; j <= n; j++) { 
+    out += (i * j) + " "; 
+  } 
+  out += "\n"; 
+} 
+ 
+alert(out); 
+</script> 
+</body> 
+</html>

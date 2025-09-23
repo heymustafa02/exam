@@ -1,0 +1,29 @@
+Q2: Limit user to 5 clicks, disable button, allow reset 
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Click Limit</title> 
+</head> 
+<body> 
+<button id="btn" onclick="clickMe()">Click Me</button> 
+<button onclick="reset()">Reset</button> 
+<p id="msg">Clicks: 0</p> 
+ 
+<script> 
+let count = 0; 
+function clickMe() { 
+  count++; 
+  document.getElementById("msg").textContent = "Clicks: " + count; 
+  if (count >= 5) { 
+    document.getElementById("btn").disabled = true; 
+  } 
+} 
+ 
+function reset() { 
+  count = 0; 
+  document.getElementById("msg").textContent = "Clicks: " + count; 
+  document.getElementById("btn").disabled = false; 
+} 
+</script> 
+</body> 
+</html>

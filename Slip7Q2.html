@@ -1,0 +1,33 @@
+Q2: Remove duplicate items from an array (ignore case)
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove Duplicates</title>
+</head>
+<body>
+  <h2>Remove Duplicates from Array</h2>
+
+  <input type="text" id="arrayInput" placeholder="Enter items separated by commas">
+  <button onclick="removeDuplicates()">Remove Duplicates</button>
+
+  <p id="result"></p>
+
+  <script>
+    function removeDuplicates() {
+      let arr = document.getElementById("arrayInput").value.split(",");
+      let seen = [];
+      let result = [];
+
+      for (let item of arr) {
+        let lower = item.trim().toLowerCase();
+        if (!seen.includes(lower)) {
+          seen.push(lower);
+          result.push(item.trim());
+        }
+      }
+
+      document.getElementById("result").innerText = "Without duplicates: " + result.join(", ");
+    }
+  </script>
+</body>
+</html>
