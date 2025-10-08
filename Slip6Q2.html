@@ -1,9 +1,6 @@
 Q2: Find second lowest and second greatest numbers
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Second Lowest & Greatest</title>
-</head>
 <body>
   <h2>Second Lowest & Second Greatest Finder</h2>
 
@@ -14,17 +11,17 @@ Q2: Find second lowest and second greatest numbers
 
   <script>
     function findSecond() {
-      let nums = document.getElementById("numbersInput").value
-                  .split(",")
-                  .map(Number);
+      // Get numbers as an array
+      let nums = document.getElementById("numbersInput").value.split(",").map(Number);
 
-      // Remove duplicates and sort
-      let unique = [...new Set(nums)].sort((a, b) => a - b);
+      // Sort ascending
+      nums.sort((a,b) => a-b);
 
-      let secondLowest = unique.length > 1 ? unique[1] : "N/A";
-      let secondGreatest = unique.length > 1 ? unique[unique.length - 2] : "N/A";
+      // Pick second lowest and second greatest
+      let secondLowest = nums[1];
+      let secondGreatest = nums[nums.length - 2];
 
-      document.getElementById("result").innerText = 
+      document.getElementById("result").innerText =
         "Second Lowest: " + secondLowest + "\nSecond Greatest: " + secondGreatest;
     }
   </script>

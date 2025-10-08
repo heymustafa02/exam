@@ -5,10 +5,14 @@ Q2: Filter negative values from an array (user input)
   <title>Filter Negative Values</title> 
 </head> 
 <body> 
-<script> 
-let arr = prompt("Enter numbers separated by commas:").split(",").map(Number); 
+  <input type="text" id="inputArray" placeholder="Enter numbers separated by commas">
+  <button onclick="filterNegatives()">Filter Negatives</button>
+<script>
+function filterNegatives() {
+     let str = document.getElementById("inputArray").value;
+let arr = str.split(",").map(Number); 
 let negative = arr.filter(n => n < 0); 
-alert("Negative numbers: " + negative.join(", ")); 
+alert("Negative numbers: " + negative.join(", "));} 
 </script> 
 </body> 
 </html>
